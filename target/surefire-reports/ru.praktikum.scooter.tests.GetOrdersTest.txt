@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.praktikum.scooter.tests.GetOrdersTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.35 s -- in ru.praktikum.scooter.tests.GetOrdersTest
