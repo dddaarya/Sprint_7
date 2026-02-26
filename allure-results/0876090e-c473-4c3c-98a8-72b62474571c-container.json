@@ -1,0 +1,1 @@
+{"uuid":"0876090e-c473-4c3c-98a8-72b62474571c","name":"Успешный логин курьера","children":["9d97b65b-5885-4d63-a292-ed6140d98610"],"befores":[],"afters":[{"name":"cleanupCourier","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1771618544135,"stop":1771618544135}],"start":1771618543777,"stop":1771618544136}

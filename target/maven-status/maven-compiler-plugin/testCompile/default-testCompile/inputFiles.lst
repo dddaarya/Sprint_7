@@ -1,0 +1,11 @@
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/api/CourierClient.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/api/Endpoints.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/data/Courier.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/data/CourierCredentials.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/data/Order.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/steps/CourierSteps.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/steps/OrderSteps.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/tests/CreateCourierTest.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/tests/CreateOrderTest.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/tests/GetOrdersTest.java
+/Users/dddaarya/IdeaProjects/Sprint_7/src/test/java/ru/praktikum/scooter/tests/LoginCourierTest.java
