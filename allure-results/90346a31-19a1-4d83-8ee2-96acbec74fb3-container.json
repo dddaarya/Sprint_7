@@ -1,0 +1,1 @@
+{"uuid":"90346a31-19a1-4d83-8ee2-96acbec74fb3","name":"Создание без логина — ошибка 400","children":["828eb14e-fc04-484a-a89d-ac0732fa65fc"],"befores":[],"afters":[{"name":"cleanupCourier","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1771617916111,"stop":1771617916111}],"start":1771617915447,"stop":1771617916130}

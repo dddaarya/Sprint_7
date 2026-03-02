@@ -1,0 +1,1 @@
+{"uuid":"b897c55c-175d-40ba-bc6d-92749c9c11a9","name":"Успешное создание курьера","children":["906411a0-2c77-43e0-898d-14216f437d91"],"befores":[],"afters":[{"name":"cleanupCourier","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1771618466444,"stop":1771618466444}],"start":1771618466065,"stop":1771618466446}

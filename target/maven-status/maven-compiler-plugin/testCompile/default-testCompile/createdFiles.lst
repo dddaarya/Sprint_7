@@ -1,0 +1,9 @@
+ru/praktikum/scooter/tests/CreateOrderTest.class
+ru/praktikum/scooter/api/Endpoints.class
+ru/praktikum/scooter/tests/CreateCourierTest.class
+ru/praktikum/scooter/data/Courier.class
+ru/praktikum/scooter/tests/GetOrdersTest.class
+ru/praktikum/scooter/data/Order.class
+ru/praktikum/scooter/api/CourierClient.class
+ru/praktikum/scooter/data/CourierCredentials.class
+ru/praktikum/scooter/tests/LoginCourierTest.class
