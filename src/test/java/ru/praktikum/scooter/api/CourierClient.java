@@ -19,7 +19,6 @@ public class CourierClient {
 
         if (loginResponse.statusCode() == 200) {
             int courierId = loginResponse.path("id");
-            // Удаляем курьера
             given()
                     .baseUri(Endpoints.BASE_URL)
                     .pathParam("id", courierId)

@@ -3,8 +3,10 @@ package ru.praktikum.scooter.tests;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import ru.praktikum.scooter.api.Endpoints;
 import ru.praktikum.scooter.data.Order;
 
@@ -15,9 +17,15 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Тесты создания заказа")
 class CreateOrderTest {
 
-    @Test
-    @DisplayName("Создание заказа БЕЗ цвета — по ТЗ")
-    void createOrderWithoutColor() {
+    @ParameterizedTest
+    @DisplayName("Создание заказа с разными цветами")
+    @CsvSource({
+            "BLACK, 'Только чёрный'",           // Только BLACK
+            "GREY, 'Только серый'",            // Только GREY
+            "BLACK,GREY, 'Оба цвета'",         // Оба цвета
+            ", 'Без цвета'"                    // Пустой color = без цвета
+    })
+    void createOrderWithColors(String color, String testName) {
         Order order = new Order();
         order.setFirstName("Test");
         order.setLastName("User");
@@ -26,7 +34,11 @@ class CreateOrderTest {
         order.setPhone("+79991234567");
         order.setRentTime(1);
         order.setDeliveryDate("2026-02-25");
-        order.setComment("No color test");
+        order.setComment("Color test: " + testName);
+
+        if (color != null && !color.isEmpty()) {
+            order.setColor(color);
+        }
 
         Response response = given()
                 .baseUri(Endpoints.BASE_URL)
@@ -37,7 +49,7 @@ class CreateOrderTest {
                 .then()
                 .extract().response();
 
-        assertEquals(201, response.statusCode());
-        assertNotNull(response.path("track"));
+        assertEquals(201, response.statusCode(), "Ожидается 201 для " + testName);
+        assertNotNull(response.path("track"), "Трек не получен для " + testName);
     }
 }

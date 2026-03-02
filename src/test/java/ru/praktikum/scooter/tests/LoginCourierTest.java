@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import ru.praktikum.scooter.api.Endpoints;
 import ru.praktikum.scooter.data.Courier;
 import ru.praktikum.scooter.data.CourierCredentials;
+import ru.praktikum.scooter.client.CourierClient;  // ⭐ ДОБАВЬ import!
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class LoginCourierTest {
 
     private String testLogin;
+    private final CourierClient courierClient = new CourierClient();  // ⭐ Клиент для DELETE
 
     @Test
     @DisplayName("Успешный логин курьера")
@@ -78,7 +80,14 @@ class LoginCourierTest {
     @AfterEach
     void cleanupCourier() {
         if (testLogin != null) {
-            System.out.println("🧹 Cleanup: " + testLogin);
+            System.out.println("🧹 Cleanup: удаляем курьера " + testLogin);
+            try {
+                courierClient.loginCourier(testLogin, "1234");
+                courierClient.deleteCourier(testLogin, "1234");
+                System.out.println("🧹 Cleanup: курьер " + testLogin + " удалён");
+            } catch (Exception e) {
+                System.out.println("🧹 Cleanup: курьер " + testLogin + " уже удалён или ошибка");
+            }
         }
     }
 }
